@@ -1,6 +1,6 @@
+let mseconds = 0;
 let seconds = 0;
 let minuts = 0;
-let hours = 0;
 let interval;
 
 function twonum(digits){
@@ -14,11 +14,11 @@ function twonum(digits){
 
 function start(){
     counter()
-    interval=setInterval(counter,1000)    
+    interval=setInterval(counter,100/6)    
 }
 
 function parcial(){
-    document.getElementById("freeze").innerText =twonum(hours)+":"+twonum(minuts)+":"+twonum(seconds)
+    document.getElementById("freeze").innerText =twonum(minuts)+":"+twonum(seconds)+":"+twonum(mseconds)
 }
 
 function pause(){
@@ -28,23 +28,23 @@ function pause(){
 
 function stop(){
     clearInterval(interval)
-    minuts=0
+    mseconds=0
     seconds=0
     document.getElementById("watch").innerText ="00:00"
     document.getElementById("freeze").innerText =""
 }
 
 function counter(){
-    seconds++
-    if(seconds==60){
-        minuts++
-        seconds=0
-        if(minuts==60){
-            hours++
-            minuts=0
+    mseconds++
+    if(mseconds==60){
+        seconds++
+        mseconds=0
+        if(seconds==60){
+            minuts++
+            seconds=0
 
         }
 
     }
-    document.getElementById("watch").innerText =twonum(hours)+":"+twonum(minuts)+":"+twonum(seconds)
+    document.getElementById("watch").innerText =twonum(minuts)+":"+twonum(seconds)+":"+twonum(mseconds)
 }

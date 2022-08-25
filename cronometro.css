@@ -22,15 +22,27 @@ button:hover{
 .start-btn{
     background-color: rgb(4, 128, 66);
 }
+.start-btn:hover{
+    background-color: rgb(78, 182, 130);
+}
 
 .stop-btn{
     background-color: rgb(194, 6, 6);
 }
 
+.stop-btn:hover{
+    background-color: rgb(255, 137, 137);
+}
 .pause-btn{
     background-color: rgb(82, 82, 82);
 }
-
+.pause-btn:hover{
+    background-color: rgb(180, 178, 178);
+}
 .parcial-btn{
     background-color: rgb(44, 46, 212);
+}
+
+.parcial-btn:hover{
+    background-color: rgb(131, 132, 226);
 }
