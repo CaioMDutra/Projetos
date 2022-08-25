@@ -14,11 +14,16 @@ function twonum(digits){
 
 function start(){
     counter()
-    interval=setInterval(counter,1000)
+    interval=setInterval(counter,1000)    
+}
+
+function parcial(){
+    document.getElementById("freeze").innerText =twonum(hours)+":"+twonum(minuts)+":"+twonum(seconds)
 }
 
 function pause(){
     clearInterval(interval)
+    
 }
 
 function stop(){
@@ -26,6 +31,7 @@ function stop(){
     minuts=0
     seconds=0
     document.getElementById("watch").innerText ="00:00"
+    document.getElementById("freeze").innerText =""
 }
 
 function counter(){
